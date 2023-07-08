@@ -20,7 +20,8 @@ function Login(props) {
 
         if (json.success) {
             localStorage.setItem('token', json.authtoken);
-
+            props.setIsLogin(true);
+            
             // Finding role
             const response2 = await fetch('http://localhost:5000/api/auth/getrole', {
                 method: 'POST',

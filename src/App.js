@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import NoteState from './context/notes/NoteState';
@@ -15,6 +16,7 @@ import Main from './components/Main';
 
 function App() {
   const [alert, changeAlert] = useState(null);
+  const [islogin, setIsLogin] = useState(false);
 
   let showAlert = (msg, type) => {
     changeAlert({
@@ -30,7 +32,7 @@ function App() {
     <>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar islogin = {islogin} setIsLogin = {setIsLogin}/>
           <Alert alert={alert} />
           <div className="container">
             <Switch>
@@ -50,7 +52,7 @@ function App() {
                 <Usernotes/>
               </Route>
               <Route exact path="/login">
-                <Login showAlert={showAlert} />
+                <Login showAlert={showAlert}  setIsLogin = {setIsLogin}/>
               </Route>
               <Route exact path="/signup" showAlert={showAlert}>
                 <Signup showAlert={showAlert} />
