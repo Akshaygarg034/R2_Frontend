@@ -38,7 +38,7 @@ function App() {
               <Route exact path="/">
                 <Main/>
               </Route>
-              <Route exact path="/student">
+              <Route exact path="/user">
                 <Home showAlert={showAlert} />
               </Route>
               <Route exact path="/admin">

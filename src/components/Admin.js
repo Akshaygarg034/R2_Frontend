@@ -16,7 +16,7 @@ function Admin(props) {
             },
         });
         const role = await response2.text();
-        if (role === "student") history.push('/student');
+        if (role === "user") history.push('/user');
         else if (role === "admin") history.push('/admin');
         else if (role === "superadmin") history.push('/superadmin');
     }

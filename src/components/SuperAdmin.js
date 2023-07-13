@@ -17,7 +17,7 @@ function SuperAdmin(props) {
       },
     });
     const role = await response2.text();
-    if (role === "student") history.push('/student');
+    if (role === "user") history.push('/user');
     else if (role === "admin") history.push('/admin');
     else if (role === "superadmin") history.push('/superadmin');
   }
@@ -50,7 +50,7 @@ function SuperAdmin(props) {
       <div className="container">
         <div className='row'>
           {users.map((user) => {
-            if (user.role === "student") return <div key={user._id} className='col-md-4 my-2'>
+            if (user.role === "user") return <div key={user._id} className='col-md-4 my-2'>
               <Usercard user={user} />
             </div>
           })}
