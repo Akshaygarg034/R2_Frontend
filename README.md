@@ -1,6 +1,6 @@
 # Role-Based MERN Web Application
 
-This project is a role-based web application built using the MERN stack (MongoDB, Express.js, React, Node.js). It implements a flexible user role system with three distinct roles: user, admin, and superadmin. Each role has different levels of access and permissions to manage notes and users.
+A role-based web application built using the MERN stack (MongoDB, Express.js, React, Node.js) which implements a flexible user role system with three distinct roles: user, admin, and superadmin. Each role has different levels of access and permissions to manage notes and users.
 
 ## Key Features
  ### User Roles:
